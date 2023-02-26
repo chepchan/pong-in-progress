@@ -6,10 +6,10 @@
 
 class Enemy : public Shape {
 public:
-    int yDir;
 
-    Enemy(olc::PixelGameEngine* pge, int yDir);
+    //Enemy(olc::PixelGameEngine* pge, int yDir);
 
     void move();
+    void follow();
     
 };

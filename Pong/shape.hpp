@@ -6,16 +6,15 @@
 class Shape {
 public:
     olc::PixelGameEngine* pge;
+    olc::vf2d pos;
+    olc::vf2d dir;
+    int speed;
 
-    const int width = 14;
-    const int height = 80;
+    Shape(olc::PixelGameEngine* pge, olc::vf2d pos, olc::vf2d dir, int speed);
 
-    int x, y;
-
-    Shape(olc::PixelGameEngine* pge, int x, int y);
-
-    virtual void draw();
-    // void move() = 0;
+    void collide();
+    //virtual void draw() = 0;
+    virtual void move() = 0;
 };
 
 

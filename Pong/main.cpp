@@ -15,6 +15,9 @@ public:
 	Player* player = nullptr;
 	Ball* ball = nullptr;
 
+
+
+
 	PONGGAME() { 
 		sAppName = "Pong";
 	}
@@ -26,8 +29,33 @@ public:
 
 	bool OnUserCreate() override
 	{
-		player = new Player(this, this->ScreenWidth() - 20, 10, 1);
-		ball = new Ball(this, 200, 200, 8);
+		const int playerSpeed = 1;
+		const int ballSpeed = 1;
+
+		const int playerWidth = 18;
+		const int playerHeight = 80;
+
+		const int radius = 8;
+
+		olc::vf2d playerPos;
+		playerPos.x = (float)(this->ScreenWidth() - 20);
+		playerPos.y = 10.0f;
+
+		olc::vf2d playerDir;
+		playerDir.x = 1.0f;
+		playerDir.y = 1.0f;
+
+		olc::vf2d ballPos;
+		ballPos.x = 200.0f;
+		ballPos.y = 200.0f;
+
+		olc::vf2d ballDir;
+		ballDir.x = 1;
+		ballDir.y = 1;
+
+		player = new Player(this, playerPos, playerDir, playerSpeed, playerWidth, playerHeight);
+		ball = new Ball(this, ballPos, ballDir, ballSpeed, radius); 
+
 		return true;
 	}
 
@@ -36,6 +64,7 @@ public:
 		Clear(olc::Pixel(0, 0, 0));
 
 		ball->draw();
+		//ball->move();
 
 		player->draw();
 		player->update();

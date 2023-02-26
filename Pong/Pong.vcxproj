@@ -139,6 +139,8 @@
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="player.cpp" />
+    <ClCompile Include="rectangle.cpp" />
+    <ClCompile Include="rectangle.hpp" />
     <ClCompile Include="shape.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
