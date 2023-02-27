@@ -15,9 +15,6 @@ public:
 	Player* player = nullptr;
 	Ball* ball = nullptr;
 
-
-
-
 	PONGGAME() { 
 		sAppName = "Pong";
 	}
@@ -32,27 +29,29 @@ public:
 		const int playerSpeed = 1;
 		const int ballSpeed = 1;
 
-		const int playerWidth = 18;
-		const int playerHeight = 80;
+		const int playerWidth = 14;
+		const int playerHeight = 140;
 
 		const int radius = 8;
 
 		olc::vf2d playerPos;
-		playerPos.x = (float)(this->ScreenWidth() - 20);
-		playerPos.y = 20.0f;              //nz kvo se sluchva, spawnva se na greshnoto mqsto
-		//playerPos.y = (float)(this->ScreenHeight() - 20);
+		playerPos.x = this->ScreenWidth() - 20.0f;
+		//playerPos.y = (rand() % this->ScreenHeight());
+		playerPos.y = 170.0f;
 
 		olc::vf2d playerDir;
 		playerDir.x = 1.0f;
 		playerDir.y = 1.0f;
 
 		olc::vf2d ballPos;
-		ballPos.x = 200.0f;
-		ballPos.y = 200.0f;
+		/*ballPos.x = (rand() % this->ScreenWidth());
+		ballPos.y = (rand() % this->ScreenHeight());*/
+		ballPos.x = 170.0f;
+		ballPos.y = 170.0f;
 
 		olc::vf2d ballDir;
-		ballDir.x = 1;
-		ballDir.y = 1;
+		ballDir.x = 1.0f;
+		ballDir.y = 1.0f;
 
 		player = new Player(this, playerPos, playerDir, playerSpeed, playerWidth, playerHeight);
 		ball = new Ball(this, ballPos, ballDir, ballSpeed, radius); 
@@ -66,9 +65,10 @@ public:
 
 		ball->draw();
 		//ball->move();
+		//ball->kill();
 
 		player->draw();
-		player->update();
+		player->move();
 
 		return true;
 	}

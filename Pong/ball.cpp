@@ -7,10 +7,21 @@ Ball::Ball(olc::PixelGameEngine* pge, olc::vf2d pos, olc::vf2d dir, int speed, i
 }
 
 void Ball::draw() {
-    pge->DrawCircle(pos.x, pos.y, radius, { 255, 175, 181 });
-    pge->FillCircle(pos.x, pos.y, radius, { 255, 175, 181 });
+    pge->DrawCircle((int)pos.x, (int)pos.y, radius, { 255, 175, 181 });
+    pge->FillCircle((int)pos.x, (int)pos.y, radius, { 255, 175, 181 });
 }
 
- void Ball::move() {
+ //void Ball::move() {
+ //    pos.y += dir.y * speed;
+ //    //pos.x += dir.x * speed;
+ //    if ((pos.y + radius) == 0.0f || (pos.y + radius) == (float)pge->ScreenHeight()) {
+ //        dir.y *= -1.0f;
+ //    }
+ //}
 
- }
+ //void Ball::kill() {
+ //    if ((pos.x) == 0 || (pos.x) == pge->ScreenWidth()) {
+ //        draw();
+ //        move();
+ //    }
+ //}

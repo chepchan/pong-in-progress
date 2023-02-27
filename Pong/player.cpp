@@ -2,22 +2,22 @@
 
 #include "olcPixelGameEngine.h"
 
-void Player::playerMove() {
-    move();
-    keyboardInput_UP();
-    keyboardInput_DOWN();
+void Player::move() {
+    if (pge->GetKey(olc::Key::UP).bHeld) {
+        dir.y = -1.0f;
+        int offset = dir.y * speed;
+        if (pos.y > 0) {
+            pos.y += offset;
+        }
+    }
+    if (pge->GetKey(olc::Key::DOWN).bHeld) {
+        dir.y = 1.0f;
+        int offset = dir.y * speed;
+        if ((pos.y + height + offset ) < pge->ScreenHeight()) {
+            pos.y += offset;
+        }
+    }
 }
 
-void Player::keyboardInput_UP() {
-    if (pge->GetKey(olc::Key::UP).bHeld) { dir.y = -1.0f; return; }
-}
-
-void Player::keyboardInput_DOWN() {
-    if (pge->GetKey(olc::Key::DOWN).bHeld) { dir.y = 1.0f; return; }
-}
-
-void Player::update() {
-    playerMove();
-}
 
 

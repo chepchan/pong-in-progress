@@ -7,12 +7,9 @@
 
 class Player : public Rectangle {
 public:
-    int speed = 1;
+    int speed = 2;
 
     using Rectangle::Rectangle;
 
-    void keyboardInput_UP();
-    void keyboardInput_DOWN();
-    void playerMove();
-    void update();
+    void move();
 };
