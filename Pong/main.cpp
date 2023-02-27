@@ -26,11 +26,11 @@ public:
 
 	bool OnUserCreate() override
 	{
-		const int playerSpeed = 1;
+		const int playerSpeed = 2;
 		const int ballSpeed = 1;
 
-		const int playerWidth = 14;
-		const int playerHeight = 140;
+		const int playerWidth = 16;
+		const int playerHeight = 160;
 
 		const int radius = 8;
 

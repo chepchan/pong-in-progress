@@ -1,6 +1,6 @@
-#include "ball.hpp"
-
 #include "olcPixelGameEngine.h"
+
+#include "ball.hpp"
 
 Ball::Ball(olc::PixelGameEngine* pge, olc::vf2d pos, olc::vf2d dir, int speed, int radius) : Shape(pge, pos, dir, speed) {
     this->radius = radius;
