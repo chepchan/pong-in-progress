@@ -39,7 +39,8 @@ public:
 
 		olc::vf2d playerPos;
 		playerPos.x = (float)(this->ScreenWidth() - 20);
-		playerPos.y = 10.0f;
+		playerPos.y = 20.0f;              //nz kvo se sluchva, spawnva se na greshnoto mqsto
+		//playerPos.y = (float)(this->ScreenHeight() - 20);
 
 		olc::vf2d playerDir;
 		playerDir.x = 1.0f;

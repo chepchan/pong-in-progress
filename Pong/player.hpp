@@ -11,9 +11,8 @@ public:
 
     using Rectangle::Rectangle;
 
-    //Player(olc::PixelGameEngine* pge, olc::vf2d pos, olc::vf2d dir, int speed, int width, int height);
-
-    //void setDirection(int y);
-    void move();
+    void keyboardInput_UP();
+    void keyboardInput_DOWN();
+    void playerMove();
     void update();
 };

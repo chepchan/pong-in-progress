@@ -1,13 +1,11 @@
 #pragma once
 
 #include "olcPixelGameEngine.h"
-#include "utils.hpp"
-#include "shape.hpp"
+#include "rectangle.hpp"
 
-class Enemy : public Shape {
+class Enemy : public Rectangle {
 public:
-
-    //Enemy(olc::PixelGameEngine* pge, int yDir);
+    using Rectangle::Rectangle;
 
     void move();
     void follow();
