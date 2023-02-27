@@ -7,8 +7,6 @@
 
 class Player : public Rectangle {
 public:
-    int speed = 2;
-
     using Rectangle::Rectangle;
 
     void move();

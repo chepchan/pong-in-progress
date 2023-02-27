@@ -1,6 +1,6 @@
-#include "player.hpp"
-
 #include "olcPixelGameEngine.h"
+
+#include "player.hpp"
 
 void Player::move() {
     if (pge->GetKey(olc::Key::UP).bHeld) {
