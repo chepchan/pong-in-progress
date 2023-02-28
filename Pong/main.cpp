@@ -64,7 +64,7 @@ public:
 		Clear(olc::Pixel(0, 0, 0));
 
 		ball->draw();
-		//ball->move();
+		ball->move();
 		//ball->kill();
 
 		player->draw();
