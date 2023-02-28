@@ -6,7 +6,7 @@
 //#include "shape.hpp"
 #include "player.hpp"
 #include "ball.hpp"
-//#include "enemy.hpp"
+#include "enemy.hpp"
 
 class PONGGAME : public olc::PixelGameEngine
 {
@@ -14,6 +14,7 @@ public:
 
 	Player* player = nullptr;
 	Ball* ball = nullptr;
+	Enemy* enemy = nullptr;
 
 	PONGGAME() { 
 		sAppName = "Pong";
@@ -22,39 +23,36 @@ public:
 	~PONGGAME() {
 		delete player;
 		delete ball;
+		delete enemy;
 	}
 
 	bool OnUserCreate() override
 	{
 		const int playerSpeed = 2;
-		const int ballSpeed = 1;
+		const int ballSpeed = 2;
 
 		const int playerWidth = 16;
 		const int playerHeight = 160;
 
 		const int radius = 8;
 
-		olc::vf2d playerPos;
-		playerPos.x = this->ScreenWidth() - 20.0f;
+		olc::vf2d playerPos; playerPos.x = this->ScreenWidth() - 20.0f; playerPos.y = 170.0f;
 		//playerPos.y = (rand() % this->ScreenHeight());
-		playerPos.y = 170.0f;
 
-		olc::vf2d playerDir;
-		playerDir.x = 1.0f;
-		playerDir.y = 1.0f;
+		olc::vf2d playerDir; playerDir.x = 1.0f; playerDir.y = 1.0f;
 
-		olc::vf2d ballPos;
+		olc::vf2d enemyPos; enemyPos.x = 10.0f; enemyPos.y = 170.0f;
+
+		olc::vf2d ballPos; ballPos.x = 170.0f; ballPos.y = 170.0f;
 		/*ballPos.x = (rand() % this->ScreenWidth());
 		ballPos.y = (rand() % this->ScreenHeight());*/
-		ballPos.x = 170.0f;
-		ballPos.y = 170.0f;
-
-		olc::vf2d ballDir;
-		ballDir.x = 1.0f;
-		ballDir.y = 1.0f;
-
+		
+		olc::vf2d ballDir; ballDir.x = 1.0f; ballDir.y = 1.0f;
+		
 		player = new Player(this, playerPos, playerDir, playerSpeed, playerWidth, playerHeight);
 		ball = new Ball(this, ballPos, ballDir, ballSpeed, radius); 
+		enemy = new Enemy(this, enemyPos, playerDir, playerSpeed, playerWidth, playerHeight);
+
 
 		return true;
 	}
@@ -69,6 +67,10 @@ public:
 
 		player->draw();
 		player->move();
+
+		enemy->draw();
+
+		
 
 		return true;
 	}
