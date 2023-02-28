@@ -1,6 +1,6 @@
 //#include "olcPixelGameEngine.h"
 
-#include "shape.hpp"
+//#include "shape.hpp"
 #include "rectangle.hpp"
 
 Rectangle::Rectangle(olc::PixelGameEngine* pge, olc::vf2d pos, olc::vf2d dir, int speed, int width, int height) : Shape (pge, pos, dir, speed) {
