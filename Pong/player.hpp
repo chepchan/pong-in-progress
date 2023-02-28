@@ -1,8 +1,8 @@
 #pragma once
 
-#include "olcPixelGameEngine.h"
+//#include "olcPixelGameEngine.h"
 //#include "utils.hpp"
-#include "shape.hpp"
+//#include "shape.hpp"
 #include "rectangle.hpp"
 
 class Player : public Rectangle {

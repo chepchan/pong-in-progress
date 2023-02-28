@@ -1,4 +1,4 @@
-#include "olcPixelGameEngine.h"
+//#include "olcPixelGameEngine.h"
 
 #include "ball.hpp"
 
@@ -11,13 +11,13 @@ void Ball::draw() {
     pge->FillCircle((int)pos.x, (int)pos.y, radius, { 255, 175, 181 });
 }
 
- //void Ball::move() {
- //    pos.y += dir.y * speed;
- //    pos.x += dir.x * speed;
- //    if ((pos.y + radius) == 0.0f || (pos.y + radius) == pge->ScreenHeight()) {
- //        dir.y *= -1.0f;
- //    }
- //}
+ void Ball::move() {
+     pos.y += dir.y * speed;
+     pos.x += dir.x * speed;
+     if ((pos.y + radius) == 0.0f || (pos.y + radius) == pge->ScreenHeight()) {
+         dir.y *= -1.0f;
+     }
+ }
 
  //void Ball::kill() {
  //    if ((pos.x) == 0 || (pos.x) == pge->ScreenWidth()) {
