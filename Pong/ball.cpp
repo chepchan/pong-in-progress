@@ -13,8 +13,8 @@ void Ball::draw() {
 
  //void Ball::move() {
  //    pos.y += dir.y * speed;
- //    //pos.x += dir.x * speed;
- //    if ((pos.y + radius) == 0.0f || (pos.y + radius) == (float)pge->ScreenHeight()) {
+ //    pos.x += dir.x * speed;
+ //    if ((pos.y + radius) == 0.0f || (pos.y + radius) == pge->ScreenHeight()) {
  //        dir.y *= -1.0f;
  //    }
  //}
