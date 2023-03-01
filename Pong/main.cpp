@@ -3,7 +3,7 @@
 
 #include "olcPixelGameEngine.h"
 
-//#include "shape.hpp"
+#include "shape.hpp"
 #include "player.hpp"
 #include "ball.hpp"
 #include "enemy.hpp"
@@ -36,22 +36,16 @@ public:
 
 		const int radius = 8;
 
-		olc::vf2d playerPos; playerPos.x = this->ScreenWidth() - 20.0f; playerPos.y = 170.0f;
-		//playerPos.y = (rand() % this->ScreenHeight());
+		Point playerPos; playerPos.x = this->ScreenWidth() - 20.0f; playerPos.y = 170.0f;
+		Point ballPos; ballPos.x = 170.0f; ballPos.y = 170.0f;
+		Point enemyPos; enemyPos.x = 10.0f; enemyPos.y = ballPos.y;
 
-		olc::vf2d playerDir; playerDir.x = 1.0f; playerDir.y = 1.0f;
-
-		olc::vf2d enemyPos; enemyPos.x = 10.0f; enemyPos.y = 170.0f;
-
-		olc::vf2d ballPos; ballPos.x = 170.0f; ballPos.y = 170.0f;
-		/*ballPos.x = (rand() % this->ScreenWidth());
-		ballPos.y = (rand() % this->ScreenHeight());*/
-		
-		olc::vf2d ballDir; ballDir.x = 1.0f; ballDir.y = 1.0f;
+		Point playerDir; playerDir.x = 1.0f; playerDir.y = 1.0f;
+		Point ballDir; ballDir.x = 1.0f; ballDir.y = 1.0f;
 		
 		player = new Player(this, playerPos, playerDir, playerSpeed, playerWidth, playerHeight);
 		ball = new Ball(this, ballPos, ballDir, ballSpeed, radius); 
-		enemy = new Enemy(this, enemyPos, playerDir, playerSpeed, playerWidth, playerHeight);
+		enemy = new Enemy(this, enemyPos, ballDir, playerSpeed, playerWidth, playerHeight);
 
 
 		return true;
@@ -69,8 +63,8 @@ public:
 		player->move();
 
 		enemy->draw();
-
-		
+		enemy->move();
+		//enemy->follow(enemyPos, ballPos);
 
 		return true;
 	}
