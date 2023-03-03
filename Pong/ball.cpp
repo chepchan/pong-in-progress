@@ -1,5 +1,3 @@
-//#include "olcPixelGameEngine.h"
-
 #include "ball.hpp"
 
 Ball::Ball(olc::PixelGameEngine* pge, Point pos, Point dir, int speed, int radius) : Shape(pge, pos, dir, speed) {

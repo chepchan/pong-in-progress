@@ -8,6 +8,4 @@ public:
     using Rectangle::Rectangle;
 
     void move();
-    //void follow(olc::vf2d enemyPos, olc::vf2d ballPos);
-    
 };

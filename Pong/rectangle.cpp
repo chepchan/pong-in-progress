@@ -1,5 +1,3 @@
-//#include "olcPixelGameEngine.h"
-
 #include "shape.hpp"
 #include "rectangle.hpp"
 

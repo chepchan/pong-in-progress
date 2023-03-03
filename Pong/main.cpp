@@ -57,14 +57,12 @@ public:
 
 		ball->draw();
 		ball->move();
-		//ball->kill();
 
 		player->draw();
 		player->move();
 
 		enemy->draw();
 		enemy->move();
-		//enemy->follow(enemyPos, ballPos);
 
 		return true;
 	}
