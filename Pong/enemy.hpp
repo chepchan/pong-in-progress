@@ -1,6 +1,5 @@
 #pragma once
 
-//#include "olcPixelGameEngine.h"
 #include "rectangle.hpp"
 
 class Enemy : public Rectangle {

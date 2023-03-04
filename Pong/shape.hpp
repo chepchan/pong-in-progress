@@ -3,19 +3,14 @@
 #include "olcPixelGameEngine.h"
 #include "utils.hpp"
 
-//struct Point {
-//    float x = 0;
-//    float y = 0;
-//};
-
 class Shape {
 public:
     olc::PixelGameEngine* pge;
-    Point pos;
-    Point dir;
+    olc::vf2d pos;
+    olc::vf2d dir;
     int speed;
 
-    Shape(olc::PixelGameEngine* pge, Point pos, Point dir, int speed);
+    Shape(olc::PixelGameEngine* pge, olc::vf2d pos, olc::vf2d dir, int speed);
 };
 
 

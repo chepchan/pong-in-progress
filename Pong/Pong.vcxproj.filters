@@ -56,5 +56,8 @@
     <ClCompile Include="rectangle.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

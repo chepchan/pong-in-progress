@@ -36,12 +36,12 @@ public:
 
 		const int radius = 8;
 
-		Point playerPos; playerPos.x = this->ScreenWidth() - 20.0f; playerPos.y = 170.0f;
-		Point ballPos; ballPos.x = 170.0f; ballPos.y = 170.0f;
-		Point enemyPos; enemyPos.x = 10.0f; enemyPos.y = ballPos.y;
+		olc::vf2d playerPos; playerPos.x = this->ScreenWidth() - 20.0f; playerPos.y = 170.0f;
+		olc::vf2d ballPos; ballPos.x = 170.0f; ballPos.y = 170.0f;
+		olc::vf2d enemyPos; enemyPos.x = 10.0f; enemyPos.y = ballPos.y;
 
-		Point playerDir; playerDir.x = 1.0f; playerDir.y = 1.0f;
-		Point ballDir; ballDir.x = 1.0f; ballDir.y = 1.0f;
+		olc::vf2d playerDir; playerDir.x = 1.0f; playerDir.y = 1.0f;
+		olc::vf2d ballDir; ballDir.x = 1.0f; ballDir.y = 1.0f;
 		
 		player = new Player(this, playerPos, playerDir, playerSpeed, playerWidth, playerHeight);
 		ball = new Ball(this, ballPos, ballDir, ballSpeed, radius); 

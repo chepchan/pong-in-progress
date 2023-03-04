@@ -1,6 +1,6 @@
 #include "shape.hpp"
 
-Shape::Shape(olc::PixelGameEngine* pge, Point pos, Point dir, int speed) {
+Shape::Shape(olc::PixelGameEngine* pge, olc::vf2d pos, olc::vf2d dir, int speed) {
     this->pge = pge;
     this->pos = pos;
     this->dir = dir;

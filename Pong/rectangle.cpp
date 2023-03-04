@@ -1,7 +1,7 @@
 #include "shape.hpp"
 #include "rectangle.hpp"
 
-Rectangle::Rectangle(olc::PixelGameEngine* pge, Point pos, Point dir, int speed, int width, int height) : Shape (pge, pos, dir, speed) {
+Rectangle::Rectangle(olc::PixelGameEngine* pge, olc::vf2d pos, olc::vf2d dir, int speed, int width, int height) : Shape (pge, pos, dir, speed) {
 	this->width = width;
 	this->height = height;
 }

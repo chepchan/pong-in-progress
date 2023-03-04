@@ -1,8 +1,3 @@
 #pragma once
 
-#include "olcPixelGameEngine.h"
-
-struct Point {
-    float x;
-    float y;
-};
+float randf(float start, float end);
