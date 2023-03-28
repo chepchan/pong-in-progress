@@ -1,6 +1,6 @@
 #pragma once
 
-#include "olcPixelGameEngine.h"
+#include "../libs/olcPixelGameEngine.h"
 #include "shape.hpp"
 
 class Ball : public Shape {

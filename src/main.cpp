@@ -1,12 +1,12 @@
 #define OLC_PGE_APPLICATION
 #include <iostream>
 
-#include "olcPixelGameEngine.h"
+#include "../libs/olcPixelGameEngine.h"
 
-#include "shape.hpp"
-#include "player.hpp"
-#include "ball.hpp"
-#include "enemy.hpp"
+#include "../src/shape.hpp""
+#include "../src/player.hpp"
+#include "../src/ball.hpp"
+#include "../src/enemy.hpp"
 
 class PONGGAME : public olc::PixelGameEngine
 {
