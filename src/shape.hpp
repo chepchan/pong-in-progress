@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../libs/olcPixelGameEngine.h"
-#include "../src/utils.hpp""
+#include "utils.hpp"
 
 class Shape {
 public:

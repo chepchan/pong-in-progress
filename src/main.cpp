@@ -3,10 +3,10 @@
 
 #include "../libs/olcPixelGameEngine.h"
 
-#include "../src/shape.hpp""
-#include "../src/player.hpp"
-#include "../src/ball.hpp"
-#include "../src/enemy.hpp"
+#include "shape.hpp"
+#include "player.hpp"
+#include "ball.hpp"
+#include "enemy.hpp"
 
 class PONGGAME : public olc::PixelGameEngine
 {
