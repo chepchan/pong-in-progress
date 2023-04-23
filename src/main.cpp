@@ -57,6 +57,11 @@ public:
 
 		ball->draw();
 		ball->move();
+		// ball->kill();
+		// if ((Ballos.x) == 0 || (ball->pos.x) == ScreenWidth()) {
+		// 	ball->draw();
+        // 	ball->move();    
+		// }
 
 		player->draw();
 		player->move();

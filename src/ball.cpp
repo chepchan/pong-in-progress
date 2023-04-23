@@ -17,9 +17,9 @@ void Ball::draw() {
      }
  }
 
- //void Ball::kill() {
- //    if ((pos.x) == 0 || (pos.x) == pge->ScreenWidth()) {
- //        Ball::draw();
- //        Ball::move();
- //    }
- //}
+//  void Ball::kill() {
+//     if ((pos.x) == 0 || (pos.x) == pge->ScreenWidth()) {
+//         Ball::draw();
+//         Ball::move();
+//     }
+//  }

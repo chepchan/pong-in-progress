@@ -11,5 +11,5 @@ public:
 
     void draw();
     void move();
-    //void kill();
+    // void kill();
 };
